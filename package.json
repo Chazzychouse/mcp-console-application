@@ -1,0 +1,14 @@
+{
+  "name": "first-mcp-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "build:server": "npm run build --workspace=first-mcp-server",
+    "build:client": "npm run build --workspace=first-mcp-client",
+    "start": "node packages/first-mcp-client/build/index.js packages//first-mcp-server//build//index.js"
+  }
+}
